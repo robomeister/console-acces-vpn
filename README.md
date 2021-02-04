@@ -5,6 +5,12 @@ Greetings!
 
 If need access to firewalled OpenShift Consoles on IBM Cloud, you must first get access to the account jumpserver.  After that follow these instructions:
 
+## Pre-req Work
+
+Make sure you have set up your VPN password for the IBM Cloud VPN and installed the recommended VPN client:
+
+https://cloud.ibm.com/docs/iaas-vpn?topic=iaas-vpn-getting-started
+
 ## Step 0 - Running a Mac?
 
 Open a command line window and type:
