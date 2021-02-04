@@ -3,7 +3,7 @@
 ## Introduction
 Greetings!
 
-If need access to firewalled OpenShift Consoles on IBM Cloud, you must first get access to the account jumpserver.  After that follow these instructions:
+If you need access to firewalled OpenShift Consoles on IBM Cloud, you must first get access to the account jumpserver.  After that follow these instructions:
 
 ## Pre-req Work
 
