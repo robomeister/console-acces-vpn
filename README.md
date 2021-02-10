@@ -3,7 +3,9 @@
 ## Introduction
 Greetings!
 
-If you need access to firewalled OpenShift Consoles on IBM Cloud, you must first get access to the account jumpserver.  After that follow these instructions:
+If you need access to firewalled OpenShift Consoles on IBM Cloud, you must first get access to the account jumpserver.  To get access, you need to generate an RSA SSH keypair and send in your public key.  On a Mac, use the `ssh-keygen` command line tool.  On a PC, download puttygen to generate a key (make sure to send the OpenSSH key that displays at the top of the puttygen window).
+
+After that follow these instructions:
 
 ## Pre-req Work
 
