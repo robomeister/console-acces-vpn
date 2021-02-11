@@ -23,7 +23,7 @@ Configure the VPN client with your VPN ID and password:
 
 ## Step 1 - Running a Mac?
 
-Open a command line window and type:
+Connect to the VPN, open a command line window, and type:
 
 ```
 ssh -i [path_to_privkey] <jumpserver id>@<jumpserver IP> -D 8989
