@@ -77,7 +77,7 @@ Go back to the Session window, give your connection a name, and then click the s
 
 ## Step 8 - Launch putty
 
-Make sure you are connected to the IBM Cloud VPN first:
+Disconnect any other VPN's you may be connected to.  Then sure you are connected to the IBM Cloud VPN:
 
 ![alt text](images/figure6a.jpg)
 
