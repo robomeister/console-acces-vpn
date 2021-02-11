@@ -1,14 +1,39 @@
-# Firewalled OpenShift Console Access over the IBM Cloud VPN
+# Firewalled Classic Network OpenShift Console Access over the IBM Cloud VPN
 
 ## Introduction
 Greetings!
 
-If you need access to firewalled OpenShift Consoles on IBM Cloud, you must first get access to the account jumpserver.  
+When OpenShift clusters are created on IBM Cloud Classic infrastructure, they look a bit like this:
 
-To get access you must do TWO things:
+![alt text](images/roks1.jpg)
+
+They have a public lan interface, as well a private one.  On Classic infrastructure the OpenShift console sits on the public LAN (On VPC Clusters, they can sit on the private LAN).  In order to protect the console, therefore, we need to put a firewall in front of it:
+
+![alt text](images/roks2.jpg)
+
+The console is now protected, but unavailble to everyone.  To solve this issue we create a jump server in the same account, and set firewall rules to allow access to the consoles:
+
+![alt text](images/roks3.jpg)
+
+So now we can access the console from the jump server, but we want to be able to access it from our own machine.  To accomplish this, we need to install a VPN client and use it to connect to the IBM Cloud Private LAN:
+
+![alt text](images/roks4.jpg)
+
+Once we have the VPN connection established, we need to open up an SSH tunnel to the jump server, using a tool like puTTY:
+
+![alt text](images/roks6.jpg)
+
+With a tunnel established we can now configure a browser like Firefox to use it as a SOCKS proxy, and safely access the OpenShift console:
+
+![alt text](images/roks7.jpg)
+
+
+
+So, to get access you must do THREE things:
 <ul>
 <li>Connect to the private LAN of the account using a VPN client</li>
 <li>Establish an SSH connection to a jumpserver over the VPN connection</li>
+<li>Configure your browser to use the SSH connection as a SOCKS proxy</li>
 </ul>
 
 To access the jumpserver, you need to generate an RSA SSH keypair and send in your public key.  On a Mac, use the `ssh-keygen` command line tool.  On a PC, download puttygen to generate a key (make sure to send the OpenSSH key that displays at the top of the puttygen window). The public key must look something like this:
