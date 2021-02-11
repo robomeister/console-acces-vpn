@@ -67,6 +67,10 @@ Go back to the Session window, give your connection a name, and then click the s
 
 Make sure you are connected to the IBM Cloud VPN first:
 
+![alt text](images/figure6a.jpg)
+
+Then open your putty connection:
+
 ![alt text](images/figure6.jpg)
 
 ## Step 9 - Configure the SOCKS proxy on your browser
