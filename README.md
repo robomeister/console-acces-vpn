@@ -53,7 +53,7 @@ To access the jumpserver, you need to generate an RSA SSH keypair and send in yo
 
 On a Mac, use the `ssh-keygen` command line tool.  
 
-On a PC, download puttygen to generate a key-pair and send the OpenSSH public key that displays at the top of the puttygen window: 
+On a PC, download and run puttygen to generate a key-pair and send the OpenSSH public key that displays at the top of the puttygen window: 
 
 ![alt text](images/puttygen.jpg)
 
