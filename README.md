@@ -75,7 +75,7 @@ Connect to the VPN, open a command line window, and type:
 ssh -i [path_to_privkey] <jumpserver id>@<jumpserver IP> -D 8989
 ```
 
-Then skip to step 10.
+Then skip to step 11.
 
 ## Step 3 - Install Putty
 
@@ -113,17 +113,19 @@ Go back to the Session window, give your connection a name, and then click the s
 
 ![alt text](images/figure5.jpg)
 
-## Step 9 - Launch putty
+## Step 9 - Connect to the IBM Cloud Private LAN
 
 Disconnect any other VPN's you may be connected to.  Then make sure you are connected to the IBM Cloud VPN:
 
 ![alt text](images/figure6a.jpg)
 
-Then open your putty connection:
+## Step 10 - Launch putty
+
+Open your putty connection.  Enter your private key password when prompted:
 
 ![alt text](images/figure6.jpg)
 
-## Step 10 - Configure the SOCKS proxy on your browser
+## Step 11 - Configure the SOCKS proxy on your browser
 
 Open up the connection settings on your browser (Firefox has this, but Chrome browsers want to change your system proxy settings.  I suggest you use Firefox).  Do the following
 
@@ -136,7 +138,7 @@ Set localhost, 127.0.0.1 as your no proxy list
 
 ![alt text](images/figure7.jpg)
 
-## Step 11  - Surf!
+## Step 12  - Surf!
 
 Surf to cloud.ibm.com, log in, select the proper account, select an OpenShift cluster and then click on the `OpenShift web console` button.  
 
@@ -148,3 +150,7 @@ If the console page is a little on the blank side, just do a reload of the page:
 
 
 Please remember to un-set your proxy settings for regular web surfing, or everything you do will be proxied through IBM Cloud
+
+## Using the CLI
+
+If you want to use the CLI, you can get a login token from the console, and paste it into your logged in putty session.  You may then us `oc` commands.
