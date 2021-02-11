@@ -13,7 +13,7 @@ After that follow these instructions:
 
 ## Step 0: Set up VPN Client
 
-Make sure you have set up your VPN password for the IBM Cloud VPN and installed the recommended VPN client:
+Make sure you have set up your VPN password for the IBM Cloud VPN <B>in the customer's account</B> and installed the recommended VPN client:
 
 https://cloud.ibm.com/docs/iaas-vpn?topic=iaas-vpn-getting-started
 
