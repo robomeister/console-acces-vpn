@@ -51,7 +51,7 @@ Configure the VPN client with your VPN ID and password:
 
 To access the jumpserver, you need to generate an RSA SSH keypair and send in your public key.  
 
-On a Mac, use the `ssh-keygen` command line tool.  
+On a Mac, use the `ssh-keygen` command line tool and send in the generated id_rsa.pub file.
 
 On a PC, download and run puttygen to generate a key-pair and send the OpenSSH public key that displays at the top of the puttygen window: 
 
