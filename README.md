@@ -11,7 +11,7 @@ They have a public lan interface, as well a private one.  On Classic infrastruct
 
 ![alt text](images/roks2.jpg)
 
-The console is now protected, but unavailble to everyone.  To solve this issue we create a jump server in the same account, and set firewall rules to allow access to the consoles:
+The console is now protected, but unavailable to everyone.  To solve this issue we create a jump server in the same account, and set firewall rules to allow access to the console:
 
 ![alt text](images/roks3.jpg)
 
@@ -23,20 +23,20 @@ Once we have the VPN connection established, we need to open up an SSH tunnel to
 
 ![alt text](images/roks6.jpg)
 
-With a tunnel established we can now configure a browser like Firefox to use it as a SOCKS proxy, and safely access the OpenShift console:
+With a tunnel established we can now configure a browser like Firefox to use the tunnel as a SOCKS proxy, and safely access the OpenShift console:
 
 ![alt text](images/roks7.jpg)
 
 
 
-So, to get access you must do THREE things:
+Therefore, to get access you must do THREE things:
 <ul>
 <li>Connect to the private LAN of the account using a VPN client</li>
 <li>Establish an SSH connection to a jumpserver over the VPN connection</li>
 <li>Configure your browser to use the SSH connection as a SOCKS proxy</li>
 </ul>
 
-To access the jumpserver, you need to generate an RSA SSH keypair and send in your public key.  On a Mac, use the `ssh-keygen` command line tool.  On a PC, download puttygen to generate a key (make sure to send the OpenSSH key that displays at the top of the puttygen window). The public key must look something like this:
+To access the jumpserver, you need to generate an RSA SSH keypair and send in your public key.  On a Mac, use the `ssh-keygen` command line tool.  On a PC, download puttygen to generate a key-pair and send the OpenSSH key that displays at the top of the puttygen window. The public key must look something like this:
 
 ```
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC1YaIO7BueeiyAENrCPu3+rSEvvm6QupU1p4crCqYITgw3+kvVmbkI1bJvSuDZ38JUSMYzirsXLeCvI3df3i9EPqRiF4rlApGXcc4q0Mheia75HBXxx6D92us3J35GOVAtS+1dqMNmc9JX7uz1HR5b3hqPGjUgzbjPOJjz460p408y16hezHupRMcP4X8B8IEka2e/h6qhdNdLkarFdZtXVZd1IxQcUcmmkz2s+95KgkZ7j6j+4rK43otPQUdk/qwT3CFE3ko35FzkUJIgjYt34edMsxF11dQclNBjIiJUWjmhOm0F4H2s5UIL98rt4O7vYM31LEtlq75KLmq6Ii43 robobob@jumpserver.robobob.ca
