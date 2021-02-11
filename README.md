@@ -7,7 +7,7 @@ When OpenShift clusters are created on IBM Cloud Classic infrastructure, they lo
 
 ![alt text](images/roks1.jpg)
 
-They have an account public lan interface, as well as an account private one.  On Classic infrastructure the OpenShift console sits on the accounts public LAN (On VPC Clusters, they can sit on the accounts private LAN).  In order to protect the console, therefore, we need to put a firewall in front of it:
+They have an account public lan interface, as well as an account private one.  On Classic infrastructure the OpenShift console sits on the accounts public LAN (On VPC Clusters, they can sit on the accounts private LAN).  If your goal is to completely isolate this cluster from the Internet, then you need to put a firewall in front of it:
 
 ![alt text](images/roks2.jpg)
 
