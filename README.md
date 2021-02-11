@@ -17,6 +17,10 @@ Make sure you have set up your VPN password for the IBM Cloud VPN and installed 
 
 https://cloud.ibm.com/docs/iaas-vpn?topic=iaas-vpn-getting-started
 
+Configure the VPN client with your VPN ID and password:
+
+![alt text](images/figure1.jpg)
+
 ## Step 1 - Running a Mac?
 
 Open a command line window and type:
