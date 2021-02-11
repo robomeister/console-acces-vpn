@@ -3,13 +3,21 @@
 ## Introduction
 Greetings!
 
-If you need access to firewalled OpenShift Consoles on IBM Cloud, you must first get access to the account jumpserver.  To get access, you need to generate an RSA SSH keypair and send in your public key.  On a Mac, use the `ssh-keygen` command line tool.  On a PC, download puttygen to generate a key (make sure to send the OpenSSH key that displays at the top of the puttygen window). The public key must look something like this:
+If you need access to firewalled OpenShift Consoles on IBM Cloud, you must first get access to the account jumpserver.  
+
+To get access you must do TWO things:
+<ul>
+<li>Connect to the private LAN of the account using a VPN client</li>
+<li>Establish an SSH connection to a jumpserver over the VPN connection</li>
+</ul>
+
+To access the jumpserver, you need to generate an RSA SSH keypair and send in your public key.  On a Mac, use the `ssh-keygen` command line tool.  On a PC, download puttygen to generate a key (make sure to send the OpenSSH key that displays at the top of the puttygen window). The public key must look something like this:
 
 ```
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC1YaIO7BueeiyAENrCPu3+rSEvvm6QupU1p4crCqYITgw3+kvVmbkI1bJvSuDZ38JUSMYzirsXLeCvI3df3i9EPqRiF4rlApGXcc4q0Mheia75HBXxx6D92us3J35GOVAtS+1dqMNmc9JX7uz1HR5b3hqPGjUgzbjPOJjz460p408y16hezHupRMcP4X8B8IEka2e/h6qhdNdLkarFdZtXVZd1IxQcUcmmkz2s+95KgkZ7j6j+4rK43otPQUdk/qwT3CFE3ko35FzkUJIgjYt34edMsxF11dQclNBjIiJUWjmhOm0F4H2s5UIL98rt4O7vYM31LEtlq75KLmq6Ii43 robobob@jumpserver.robobob.ca
 ```
 
-After that follow these instructions:
+After you send in your public key, follow these instructions:
 
 ## Step 0: Set up VPN Client
 
